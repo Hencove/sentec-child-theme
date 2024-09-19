@@ -1,5 +1,9 @@
 <?php
 
+/* 
+	Testing my ability to cast Hi Alana thru Git!
+*/
+
 function theme_enqueue_styles() {
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'avada-stylesheet' ) );
 }
