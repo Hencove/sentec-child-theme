@@ -7,4 +7,21 @@ body.post-type-archive-sentec-publications {
 	.widget-title.wpc-filter-title {
 		display: none;
 	}
+    .wpc-filters-widget-select {
+        appearance: none;
+        position: relative;
+        &:after {
+            content: '>';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 50%;
+            right: 0;
+            transform: translate(-50%, 0) rotate(90deg);
+            background-color: gray;
+            color: white;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
 }
