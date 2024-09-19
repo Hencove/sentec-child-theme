@@ -5,9 +5,11 @@ body.post-type-archive-sentec-publications .wpc-filters-widget-select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+}
+body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select) {
   position: relative;
 }
-body.post-type-archive-sentec-publications .wpc-filters-widget-select:after {
+body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select):after {
   content: ">";
   position: absolute;
   width: 24px;
