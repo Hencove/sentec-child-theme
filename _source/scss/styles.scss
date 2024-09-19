@@ -9,12 +9,14 @@ body.post-type-archive-sentec-publications {
 	}
 	.wpc-filters-widget-select {
 		appearance: none;
+        margin-bottom: 0;
 	}
 	div:has(> .wpc-filters-widget-select) {
 		position: relative;
 		// circle bg and chevron mostly overlap
 		&:before,
 		&:after {
+            content: '';
 			position: absolute;
 			top: 50%;
 			right: 0;
