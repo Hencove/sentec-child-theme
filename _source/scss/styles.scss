@@ -9,14 +9,14 @@ body.post-type-archive-sentec-publications {
 	}
 	.wpc-filters-widget-select {
 		appearance: none;
-        margin-bottom: 0;
+		margin-bottom: 0;
 	}
 	div:has(> .wpc-filters-widget-select) {
 		position: relative;
 		// circle bg and chevron mostly overlap
 		&:before,
 		&:after {
-            content: '';
+			content: "";
 			position: absolute;
 			top: 50%;
 			right: 0;
@@ -26,14 +26,20 @@ body.post-type-archive-sentec-publications {
 		&:before {
 			border-radius: 50%;
 			background-color: gray;
-            height: 50px;
-            width: 50px;
+			height: 50px;
+			width: 50px;
 		}
 		// the cheron (swap with a svg or fa-icon)
 		&:after {
-			content: ">";
-			color: white;
-            line-height: 50px;
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%) rotate(90deg);
+			width: 50px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
 		}
 	}
 }

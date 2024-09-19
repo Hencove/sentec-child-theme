@@ -24,7 +24,13 @@ body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select)
   width: 50px;
 }
 body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select):after {
-  content: ">";
-  color: white;
-  line-height: 50px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%) rotate(90deg);
+  width: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
 }
