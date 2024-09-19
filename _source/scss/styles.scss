@@ -7,23 +7,31 @@ body.post-type-archive-sentec-publications {
 	.widget-title.wpc-filter-title {
 		display: none;
 	}
-    .wpc-filters-widget-select {
-        appearance: none;
-    }
+	.wpc-filters-widget-select {
+		appearance: none;
+	}
 	div:has(> .wpc-filters-widget-select) {
-        position: relative;
+		position: relative;
+		// circle bg and chevron mostly overlap
+		&:before,
 		&:after {
-			content: ">";
 			position: absolute;
-			width: 24px;
-			height: 24px;
 			top: 50%;
 			right: 0;
-			transform: translate(-50%, 0) rotate(90deg);
-			background-color: gray;
-			color: white;
+			transform: translate(0, -50%);
+		}
+		// the circle bg
+		&:before {
 			border-radius: 50%;
-			overflow: hidden;
+			background-color: gray;
+            height: 50px;
+            width: 50px;
+		}
+		// the cheron (swap with a svg or fa-icon)
+		&:after {
+			content: ">";
+			color: white;
+            line-height: 50px;
 		}
 	}
 }
