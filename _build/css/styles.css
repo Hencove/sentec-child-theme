@@ -1,3 +1,38 @@
+body.post-type-archive-sentec-publications .select2-selection--single {
+  border-color: #dfdddc !important;
+  border-radius: 5px !important;
+  border-width: 2px !important;
+}
+body.post-type-archive-sentec-publications .select2-selection__arrow {
+  box-sizing: content-box !important;
+  background-color: #dfdddc !important;
+  border-radius: 50% !important;
+  border: 2px solid #dfdddc !important;
+  width: 38px !important;
+  height: 38px !important;
+  right: 0 !important;
+  top: 0 !important;
+  transform: translate(33%, 0) !important;
+}
+body.post-type-archive-sentec-publications .select2-selection__arrow b {
+  color: #fff;
+  border-left: unset !important;
+  border-top: unset !important;
+  transform: unset !important;
+  width: 100% !important;
+  height: 100% !important;
+  right: unset !important;
+  top: unset !important;
+  left: unset !important;
+  font-family: var(--fa-style-family-classic);
+}
+body.post-type-archive-sentec-publications .select2-selection__arrow b:before {
+  content: "\f078";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 body.post-type-archive-sentec-publications .widget-title.wpc-filter-title {
   display: none;
 }
@@ -6,31 +41,8 @@ body.post-type-archive-sentec-publications .wpc-filters-widget-select {
      -moz-appearance: none;
           appearance: none;
   margin-bottom: 0;
+  margin-right: 1em;
 }
-body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select) {
-  position: relative;
-}
-body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select):before, body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select):after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-}
-body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select):before {
-  border-radius: 50%;
-  background-color: gray;
-  height: 50px;
-  width: 50px;
-}
-body.post-type-archive-sentec-publications div:has(> .wpc-filters-widget-select):after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%) rotate(90deg);
-  width: 50px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
+body.post-type-archive-sentec-publications .wpc-filter-content {
+  margin-right: 1em;
 }
