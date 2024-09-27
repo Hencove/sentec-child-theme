@@ -6,7 +6,7 @@
 
 body.post-type-archive-sentec-publications .wpc-filter-content > .select2-container--default {
   padding-right: 24px;
-  width: auto !important;
+  width: 100% !important;
   min-width: unset !important;
   max-width: 100%;
 }
@@ -46,14 +46,4 @@ body.post-type-archive-sentec-publications .select2-selection__arrow b:before {
 }
 body.post-type-archive-sentec-publications .widget-title.wpc-filter-title {
   display: none;
-}
-body.post-type-archive-sentec-publications .wpc-filters-widget-select {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  margin-bottom: 0;
-  margin-right: 1em;
-}
-body.post-type-archive-sentec-publications .wpc-filter-content {
-  margin-right: 1em;
 }
