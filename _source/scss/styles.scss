@@ -1,6 +1,18 @@
 @use "sass:math";
 @import "./mixins.scss";
 //
+
+// utility class
+.hero-margin-left-shim {
+	&.fusion-layout-column {
+		> .fusion-column-wrapper {
+			@media screen and (min-width: 1491px) {
+				margin-left: calc(calc(100vw - 1430px) / 2);
+			}
+		}
+	}
+}
+
 //
 body.post-type-archive-sentec-publications {
 	//
