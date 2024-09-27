@@ -15,6 +15,14 @@
 
 //
 body.post-type-archive-sentec-publications {
+	.wpc-filter-content {
+		> .select2-container--default {
+			padding-right: 24px;
+			width: auto !important;
+			min-width: unset !important;
+			max-width: 100%;
+		}
+	}
 	//
 	.select2-selection--single {
 		border-color: #dfdddc !important;
@@ -31,7 +39,7 @@ body.post-type-archive-sentec-publications {
 		height: 38px !important;
 		right: 0 !important;
 		top: 0 !important;
-		transform: translate(33%, 0) !important;
+		// transform: translate(33%, 0) !important;
 
 		// we turn this element into a chevron
 		b {
@@ -52,15 +60,6 @@ body.post-type-archive-sentec-publications {
 		}
 	}
 
-	// .select2-selection__arrow {
-	// @include aspect-ratio(1, 1);
-	// background-color: red;
-	// color: white;
-	// b {
-	// 	@include center_absolute();
-	// }
-	// }
-	//
 	.widget-title.wpc-filter-title {
 		display: none;
 	}
@@ -72,10 +71,4 @@ body.post-type-archive-sentec-publications {
 	.wpc-filter-content {
 		margin-right: 1em;
 	}
-	// span:has(> .select2-selection__arrow) {
-	// 	background: #dfdddc;
-	// 	border-radius: 50%;
-	// 	height: 100%;
-	// 	position: absolute;
-	// }
 }

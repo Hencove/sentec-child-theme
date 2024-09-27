@@ -20,7 +20,9 @@
 	// for each filter: inject (add html after select element, not inside it) new element for the arrow thing (with class)
 	filters.each(function (index, filterEl) {
 		// config standard select2 instance
-		let select2Options = { minimumResultsForSearch: -1 };
+		let select2Options = {
+			minimumResultsForSearch: -1,
+		};
 
 		// instantiate select2
 		$(filterEl).select2(select2Options);
