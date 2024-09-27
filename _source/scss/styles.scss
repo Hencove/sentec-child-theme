@@ -28,6 +28,7 @@ body.post-type-archive-sentec-publications {
 		border-color: #dfdddc !important;
 		border-radius: 5px !important;
 		border-width: 2px !important;
+		padding: 0 !important;
 	}
 	//	we make this selector a circle
 	.select2-selection__arrow {
@@ -38,8 +39,8 @@ body.post-type-archive-sentec-publications {
 		width: 38px !important;
 		height: 38px !important;
 		right: 0 !important;
-		top: 0 !important;
-		// transform: translate(33%, 0) !important;
+		top: 50% !important;
+		transform: translateY(-50%) !important;
 
 		// we turn this element into a chevron
 		b {
