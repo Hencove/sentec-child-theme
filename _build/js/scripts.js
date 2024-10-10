@@ -16,6 +16,13 @@
   //
   // ... silence is golden
 
+  var forcedFullSizeImages = $(".fusion-imageframe.is-always-full-size img");
+  if (forcedFullSizeImages) {
+    // $(forcedFullSizeImages).removeAttr("srcset");
+    // $(forcedFullSizeImages).removeAttr("sizes");
+    $(forcedFullSizeImages).attr('sizes', '(max-width: 640px) 100vw');
+  }
+
   // get all the filters on this page...
   var filters = $("body.post-type-archive-sentec-publications .wpc-filters-widget-select");
 
