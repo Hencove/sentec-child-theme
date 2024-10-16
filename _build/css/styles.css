@@ -10,6 +10,9 @@ body.post-type-archive-sentec-publications .wpc-filter-content > .select2-contai
   min-width: unset !important;
   max-width: 100%;
 }
+body.post-type-archive-sentec-publications .wpc-filter-content select.wpc-filters-widget-select {
+  pointer-events: none;
+}
 body.post-type-archive-sentec-publications .select2-selection--single {
   border-color: #dfdddc !important;
   border-radius: 5px !important;
@@ -48,4 +51,22 @@ body.post-type-archive-sentec-publications .select2-selection__arrow b:before {
 }
 body.post-type-archive-sentec-publications .widget-title.wpc-filter-title {
   display: none;
+}
+body.post-type-archive-sentec-publications a.wpc-filters-submit-button {
+  border-radius: 25px !important;
+}
+body.post-type-archive-sentec-publications a.wpc-filters-reset-button {
+  color: var(--awb-text-color);
+  text-decoration: underline;
+  background-color: unset;
+  border: unset;
+  border-radius: unset;
+  padding: unset;
+  width: unset;
+}
+body.post-type-archive-sentec-publications .wpc-filter-layout-submit-button {
+  flex-direction: unset;
+}
+body.post-type-archive-sentec-publications .wpc-filters-section:last-child {
+  margin-bottom: unset;
 }
