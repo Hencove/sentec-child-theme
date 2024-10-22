@@ -49,6 +49,13 @@ body.post-type-archive-sentec-publications .select2-selection__arrow b:before {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+body.post-type-archive-sentec-publications .select2-container--default.select2-container--open .select2-dropdown {
+  border: 2px solid #dfdddc !important;
+  border-top: 0px !important;
+}
+body.post-type-archive-sentec-publications .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #ff6600;
+}
 body.post-type-archive-sentec-publications .widget-title.wpc-filter-title {
   display: none;
 }
@@ -69,4 +76,7 @@ body.post-type-archive-sentec-publications .wpc-filter-layout-submit-button {
 }
 body.post-type-archive-sentec-publications .wpc-filters-section:last-child {
   margin-bottom: unset;
+}
+body.post-type-archive-sentec-publications div:has(> a.fusion-button) {
+  margin-top: auto;
 }

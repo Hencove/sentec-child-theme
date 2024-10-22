@@ -65,7 +65,15 @@ body.post-type-archive-sentec-publications {
 			}
 		}
 	}
+	.select2-container--default.select2-container--open .select2-dropdown {
+		border: 2px solid #dfdddc !important;
+		border-top: 0px !important;
+	}
 
+	.select2-container--default
+		.select2-results__option--highlighted.select2-results__option--selectable {
+		background-color: #ff6600;
+	}
 	.widget-title.wpc-filter-title {
 		display: none;
 	}
@@ -97,4 +105,9 @@ body.post-type-archive-sentec-publications {
 	// .wpc-filter-content {
 	// 	margin-right: 1em;
 	// }
+
+	//set 'Read More' button to sit at the bottom of the container for consistency
+	div:has(> a.fusion-button) {
+		margin-top: auto;
+	}
 }
