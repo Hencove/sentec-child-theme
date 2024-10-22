@@ -4,6 +4,9 @@
   }
 }
 
+body.post-type-archive-sentec-publications .hero-img {
+  max-height: 350px;
+}
 body.post-type-archive-sentec-publications .wpc-filter-content > .select2-container--default {
   padding-right: 24px;
   width: 100% !important;
