@@ -1,99 +1,16 @@
 <?php
 
+require_once(get_stylesheet_directory() . '/functions/hencove_migrator.php');
+
+
 add_action('wp_head', function () {
 	echo '<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />';
 	echo '<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>';
 }, 10, 1);
 
 
-if (defined('WP_CLI') && WP_CLI) {
-	// WP_CLI::add_command('migrate_posts', 'migrate_posts_to_new_post_type');
-}
-
-/**
- * Migrate posts from default post type to new custom post types based on tags.
- */
-function migrate_posts_to_new_post_type()
-{
-	// Fetch posts with specific tags
-	$args = array(
-		'post_type' => 'post',
-		'posts_per_page' => -1,
-		'tax_query' => array(
-			array(
-				'taxonomy' => 'category',
-				'field'    => 'slug',
-				'terms'    => array('blog'), // Specify the tags you want to migrate
-			),
-		),
-	);
-
-	$posts = get_posts($args);
-
-	if (empty($posts)) {
-		WP_CLI::success('No posts found with the specified tags.');
-		return;
-	}
-
-	foreach ($posts as $post) {
-		WP_CLI::log('Processing post ID: ' . $post->ID);
-
-		// Step 1: Change the post type
-		$new_post_type = 'sentec-articles'; // Your custom post type
-		$post_data = array(
-			'ID'        => $post->ID,
-			'post_type' => $new_post_type,
-		);
-		wp_update_post($post_data);
-		WP_CLI::log('Updated post type for post ID: ' . $post->ID);
-
-		// Step 2: Get terms and assign custom taxonomy
-		$post_id = $post->ID;
-		$terms = wp_get_post_terms($post_id, 'post_tag');
-
-		// Initialize term slugs array
-		$term_slugs = [];
-
-		// Check if terms were found
-		if (! is_wp_error($terms) && ! empty($terms)) {
-			$term_slugs = wp_list_pluck($terms, 'slug');
-			WP_CLI::log('Term slugs: ' . implode(', ', $term_slugs));
-		}
-
-		// Check if specific term is present
-		if (in_array('ipv-therapy', $term_slugs)) {
-			$custom_taxonomy = 'sentec-product-lines'; // Your custom taxonomy
-
-			// Get the term ID for 'ipv' from the custom taxonomy
-			$ipv_term = get_term_by('slug', 'ipv', $custom_taxonomy);
-
-			if ($ipv_term && ! is_wp_error($ipv_term)) {
-				// Use the term ID instead of the slug
-				$ipv_term_id = $ipv_term->term_id;
-
-				// Assign the term ID to the post in the 'sentec-product-lines' taxonomy
-				$result = wp_set_post_terms($post->ID, array($ipv_term_id), $custom_taxonomy);
-
-				// Log the result to confirm term assignment
-				WP_CLI::log('Assigned term ID ' . $ipv_term_id . ' to taxonomy "sentec-product-lines" for post ID: ' . $post->ID);
-
-				// Check for success or failure
-				if (! is_wp_error($result)) {
-					WP_CLI::success('Successfully assigned custom taxonomy for post ID: ' . $post->ID);
-				} else {
-					WP_CLI::error('Failed to assign custom taxonomy for post ID: ' . $post->ID);
-				}
-			} else {
-				WP_CLI::error('Failed to find the term "ipv" in the custom taxonomy "sentec-product-lines".');
-			}
-		}
-	}
 
 
-
-
-	WP_CLI::success('Post migration completed!');
-}
 
 function theme_enqueue_styles()
 {
