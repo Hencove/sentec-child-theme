@@ -116,3 +116,42 @@ body.post-type-archive-sentec-publications {
 		margin-top: auto;
 	}
 }
+
+html body {
+	.wpc-filters-main-wrap .wpc-filters-labels {
+		// not checked
+		input.wpc-label-input + label {
+			.wpc-filter-label-wrapper {
+				transition: all 0.3s ease-in-out;
+			}
+		}
+
+		// is checked
+		input.wpc-label-input:checked + label {
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			.wpc-filter-label-wrapper {
+				position: relative;
+				padding-right: 2rem;
+				color: var(--awb-color5);
+				background-color: #fff;
+
+				// set color for things that need it
+				&::after,
+				a {
+					color: var(--awb-color5);
+				}
+
+				// structure the psuedo check
+				&::after {
+					display: inline-block;
+					position: absolute;
+					right: 0.5rem;
+					top: 50%;
+					transform: translateY(-50%);
+					content: "\f00c";
+					font-family: "awb-icons";
+				}
+			}
+		}
+	}
+}

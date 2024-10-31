@@ -83,3 +83,29 @@ body.post-type-archive-sentec-publications .wpc-filters-section:last-child {
 body.post-type-archive-sentec-publications div:has(> a.fusion-button) {
   margin-top: auto;
 }
+
+html body .wpc-filters-main-wrap .wpc-filters-labels input.wpc-label-input + label .wpc-filter-label-wrapper {
+  transition: all 0.3s ease-in-out;
+}
+html body .wpc-filters-main-wrap .wpc-filters-labels input.wpc-label-input:checked + label {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+html body .wpc-filters-main-wrap .wpc-filters-labels input.wpc-label-input:checked + label .wpc-filter-label-wrapper {
+  position: relative;
+  padding-right: 2rem;
+  color: var(--awb-color5);
+  background-color: #fff;
+}
+html body .wpc-filters-main-wrap .wpc-filters-labels input.wpc-label-input:checked + label .wpc-filter-label-wrapper::after,
+html body .wpc-filters-main-wrap .wpc-filters-labels input.wpc-label-input:checked + label .wpc-filter-label-wrapper a {
+  color: var(--awb-color5);
+}
+html body .wpc-filters-main-wrap .wpc-filters-labels input.wpc-label-input:checked + label .wpc-filter-label-wrapper::after {
+  display: inline-block;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f00c";
+  font-family: "awb-icons";
+}
