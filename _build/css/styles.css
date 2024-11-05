@@ -77,9 +77,6 @@ body.post-type-archive-sentec-publications a.wpc-filters-reset-button {
 body.post-type-archive-sentec-publications .wpc-filter-layout-submit-button {
   flex-direction: unset;
 }
-body.post-type-archive-sentec-publications .wpc-filters-section:last-child {
-  margin-bottom: unset;
-}
 body.post-type-archive-sentec-publications div:has(> a.fusion-button) {
   margin-top: auto;
 }
