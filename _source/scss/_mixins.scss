@@ -1,0 +1,21 @@
+// ? padding-top is used to manually proportion images that fill a specific size
+// ? <img> tags do not ever use this
+// ? div.bgimage--container uses this, with ANY inner content absolutely positioned.
+// ? for anything more complex than the bgimage case; essentially use a .content in its place
+@mixin aspect-ratio($w, $h) {
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: (math.div($h, $w) * 100%);
+	}
+}
+
+@mixin center_absolute() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
