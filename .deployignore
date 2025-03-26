@@ -1,0 +1,15 @@
+.env
+.env.*
+auth.json
+vendor
+
+.git
+.gitignore
+mix-manifest.json
+package-lock.json
+package.json
+webpack.mix.js
+
+/node_modules
+
+_source/

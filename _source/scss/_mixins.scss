@@ -3,19 +3,19 @@
 // ? div.bgimage--container uses this, with ANY inner content absolutely positioned.
 // ? for anything more complex than the bgimage case; essentially use a .content in its place
 @mixin aspect-ratio($w, $h) {
-	position: relative;
+  position: relative;
 
-	&:before {
-		display: block;
-		content: "";
-		width: 100%;
-		padding-top: (math.div($h, $w) * 100%);
-	}
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (math.div($h, $w) * 100%);
+  }
 }
 
 @mixin center_absolute() {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
