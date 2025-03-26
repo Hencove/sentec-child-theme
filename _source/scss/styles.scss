@@ -4,154 +4,154 @@
 
 // utility class
 .hero-margin-left-shim {
-	&.fusion-layout-column {
-		> .fusion-column-wrapper {
-			@media screen and (min-width: 1491px) {
-				margin-left: calc(calc(100vw - 1430px) / 2);
-			}
-		}
-	}
+  &.fusion-layout-column {
+    > .fusion-column-wrapper {
+      @media screen and (min-width: 1491px) {
+        margin-left: calc(calc(100vw - 1430px) / 2);
+      }
+    }
+  }
 }
 
 //
 body.post-type-archive-sentec-publications {
-	.hero-img {
-		max-height: 350px;
-	}
+  .hero-img {
+    max-height: 350px;
+  }
 
-	//
-	.wpc-filter-content {
-		> .select2-container--default {
-			padding-right: 24px;
-			width: 100% !important;
-			min-width: unset !important;
-			max-width: 100%;
-		}
-	}
-	//
-	.wpc-filter-content select.wpc-filters-widget-select {
-		pointer-events: none;
-	}
+  //
+  .wpc-filter-content {
+    > .select2-container--default {
+      padding-right: 24px;
+      width: 100% !important;
+      min-width: unset !important;
+      max-width: 100%;
+    }
+  }
+  //
+  .wpc-filter-content select.wpc-filters-widget-select {
+    pointer-events: none;
+  }
 
-	//
-	.select2-selection--single {
-		border-color: #dfdddc !important;
-		border-radius: 5px !important;
-		border-width: 2px !important;
-		padding: 0 !important;
-	}
-	//	we make this selector a circle
-	.select2-selection__arrow {
-		box-sizing: content-box !important;
-		background-color: #dfdddc !important;
-		border-radius: 50% !important;
-		border: 2px solid #dfdddc !important;
-		width: 38px !important;
-		height: 38px !important;
-		right: 0 !important;
-		top: 50% !important;
-		transform: translateY(-50%) !important;
+  //
+  .select2-selection--single {
+    border-color: #dfdddc !important;
+    border-radius: 5px !important;
+    border-width: 2px !important;
+    padding: 0 !important;
+  }
+  //	we make this selector a circle
+  .select2-selection__arrow {
+    box-sizing: content-box !important;
+    background-color: #dfdddc !important;
+    border-radius: 50% !important;
+    border: 2px solid #dfdddc !important;
+    width: 38px !important;
+    height: 38px !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
 
-		// we turn this element into a chevron
-		b {
-			color: #fff;
-			border-left: unset !important;
-			border-top: unset !important;
-			transform: unset !important;
-			width: 100% !important;
-			height: 100% !important;
-			right: unset !important;
-			top: unset !important;
-			left: unset !important;
-			font-family: var(--fa-style-family-classic);
-			&:before {
-				content: "\f078";
-				@include center_absolute;
-			}
-		}
-	}
-	.select2-container--default.select2-container--open .select2-dropdown {
-		border: 2px solid #dfdddc !important;
-		border-top: 0px !important;
-	}
+    // we turn this element into a chevron
+    b {
+      color: #fff;
+      border-left: unset !important;
+      border-top: unset !important;
+      transform: unset !important;
+      width: 100% !important;
+      height: 100% !important;
+      right: unset !important;
+      top: unset !important;
+      left: unset !important;
+      font-family: var(--fa-style-family-classic);
+      &:before {
+        content: "\f078";
+        @include center_absolute;
+      }
+    }
+  }
+  .select2-container--default.select2-container--open .select2-dropdown {
+    border: 2px solid #dfdddc !important;
+    border-top: 0px !important;
+  }
 
-	.select2-container--default
-		.select2-results__option--highlighted.select2-results__option--selectable {
-		background-color: #ff6600;
-	}
-	.widget-title.wpc-filter-title {
-		display: none;
-	}
+  .select2-container--default
+    .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #ff6600;
+  }
+  .widget-title.wpc-filter-title {
+    display: none;
+  }
 
-	a.wpc-filters-submit-button {
-		border-radius: 25px !important;
-	}
+  a.wpc-filters-submit-button {
+    border-radius: 25px !important;
+  }
 
-	a.wpc-filters-reset-button {
-		color: var(--awb-text-color);
-		text-decoration: underline;
-		background-color: unset;
-		border: unset;
-		border-radius: unset;
-		padding: unset;
-		width: unset;
-	}
-	.wpc-filter-layout-submit-button {
-		flex-direction: unset;
-	}
-	.wpc-filters-section {
-		// margin-bottom: unset;
-	}
-	// .wpc-filters-widget-select {
-	// 	appearance: none;
-	// 	margin-bottom: 0;
-	// 	margin-right: 1em;
-	// }
-	// .wpc-filter-content {
-	// 	margin-right: 1em;
-	// }
+  a.wpc-filters-reset-button {
+    color: var(--awb-text-color);
+    text-decoration: underline;
+    background-color: unset;
+    border: unset;
+    border-radius: unset;
+    padding: unset;
+    width: unset;
+  }
+  .wpc-filter-layout-submit-button {
+    flex-direction: unset;
+  }
+  .wpc-filters-section {
+    // margin-bottom: unset;
+  }
+  // .wpc-filters-widget-select {
+  // 	appearance: none;
+  // 	margin-bottom: 0;
+  // 	margin-right: 1em;
+  // }
+  // .wpc-filter-content {
+  // 	margin-right: 1em;
+  // }
 
-	//set 'Read More' button to sit at the bottom of the container for consistency
-	div:has(> a.fusion-button) {
-		margin-top: auto;
-	}
+  //set 'Read More' button to sit at the bottom of the container for consistency
+  div:has(> a.fusion-button) {
+    margin-top: auto;
+  }
 }
 
 html body {
-	.wpc-filters-main-wrap .wpc-filters-labels {
-		// not checked
-		input.wpc-label-input + label {
-			.wpc-filter-label-wrapper {
-				transition: all 0.3s ease-in-out;
-			}
-		}
+  .wpc-filters-main-wrap .wpc-filters-labels {
+    // not checked
+    input.wpc-label-input + label {
+      .wpc-filter-label-wrapper {
+        transition: all 0.3s ease-in-out;
+      }
+    }
 
-		// is checked
-		input.wpc-label-input:checked + label {
-			border: 1px solid rgba(0, 0, 0, 0.1);
-			.wpc-filter-label-wrapper {
-				position: relative;
-				padding-right: 2rem;
-				color: var(--awb-color5);
-				background-color: #fff;
+    // is checked
+    input.wpc-label-input:checked + label {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      .wpc-filter-label-wrapper {
+        position: relative;
+        padding-right: 2rem;
+        color: var(--awb-color5);
+        background-color: #fff;
 
-				// set color for things that need it
-				&::after,
-				a {
-					color: var(--awb-color5);
-				}
+        // set color for things that need it
+        &::after,
+        a {
+          color: var(--awb-color5);
+        }
 
-				// structure the psuedo check
-				&::after {
-					display: inline-block;
-					position: absolute;
-					right: 0.5rem;
-					top: 50%;
-					transform: translateY(-50%);
-					content: "\f00c";
-					font-family: "awb-icons";
-				}
-			}
-		}
-	}
+        // structure the psuedo check
+        &::after {
+          display: inline-block;
+          position: absolute;
+          right: 0.5rem;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "\f00c";
+          font-family: "awb-icons";
+        }
+      }
+    }
+  }
 }
