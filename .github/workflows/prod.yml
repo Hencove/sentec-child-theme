@@ -1,0 +1,43 @@
+# Deploy to WP Engine Stage environment
+# https://wpengine.com/support/environments/#About_Environments
+name: Deploy to staging
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Deploy-to-WP-Engine-Stage:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Preparing to deploy to WP Engine staging"
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - name: Install theme dependencies
+        run: npm ci
+      - name: Check code formatting with Prettier
+        run: npx prettier . --check
+      - name: Mix theme
+        run: npx mix -p
+      - name: GitHub Action Deploy to WP Engine
+        uses: wpengine/github-action-wpe-site-deploy@v3
+        with:
+          # Deploy vars
+          # https://github.com/wpengine/github-action-wpe-site-deploy?tab=readme-ov-file#environment-variables--secrets
+
+          # The private RSA key you will save in the Github Secrets
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }}
+          # Destination to deploy to WPE
+          # Change to your environment name
+          WPE_ENV: sentecmonitor
+
+          # Deploy options
+
+          # An optional destination directory to deploy
+          # to other than the WordPress root.
+          REMOTE_PATH: "wp-content/themes/Avada-Child-Theme/"
+          # Optional flags for the deployment
+          FLAGS: -azvr --inplace --delete --include-from=.deployinclude --exclude=.* --exclude-from=.deployignore
