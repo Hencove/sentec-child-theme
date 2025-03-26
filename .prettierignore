@@ -1,0 +1,10 @@
+# Ignore artifacts:
+_build
+coverage
+node_modules
+
+.deployignore
+.deployinclude
+
+# Ignore php, due to formatting specifics used in WordPress
+*.php
