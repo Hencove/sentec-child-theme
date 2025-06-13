@@ -1,0 +1,98 @@
+/**
+ * Custom Flipbox Styling
+ * Pre-requisites:
+ * - Ensure that the parent element has a class of `sentec-flipbox`.
+ * - The flipbox should contain a nested column with two child columns
+ * - The first column should have a class of `flip-box-front`.
+ * - The second column should have a class of `flip-box-back`.
+ */
+.sentec-flipbox {
+  perspective: 1000px;
+  position: relative;
+  //
+  .fusion-column-wrapper {
+    transform-style: preserve-3d;
+    overflow: visible;
+    //
+    .fusion-builder-row {
+      height: 100%;
+    }
+  }
+  .fusion-builder-row-inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    transition: transform 1.2s cubic-bezier(0.2, 0.85, 0.4, 1.275);
+  }
+
+  .flip-box-front,
+  .flip-box-back {
+    grid-area: 1 / 1 / 2 / 2;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    perspective: 1000px;
+    transition: transform 1.2s cubic-bezier(0.2, 0.85, 0.4, 1.275);
+    //
+    .fusion-column-wrapper {
+      height: 100%;
+    }
+  }
+
+  .flip-box-front {
+    z-index: 2;
+    transform: rotateY(0deg);
+
+    .fusion-column-wrapper {
+      display: grid !important;
+      grid-template-rows: auto 1fr auto auto;
+      grid-template-columns: 1fr;
+      height: 100%;
+      align-items: stretch;
+
+      .fusion-imageframe {
+        grid-row: 1;
+        align-self: start;
+      }
+
+      .fusion-title {
+        grid-row: 3;
+      }
+
+      .fusion-text {
+        grid-row: 4;
+      }
+    }
+  }
+
+  .flip-box-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    //
+    .fusion-column-wrapper {
+      height: 100%;
+    }
+  }
+
+  &:hover .fusion-builder-row-inner {
+    transform: rotateY(180deg);
+  }
+
+  /*
+      //*******
+      Style modifications for flipbox card elements
+      //******* 
+      */
+
+  ul {
+    padding-inline-start: 1em;
+  }
+  .fusion-image-element,
+  .fusion-imageframe,
+  img {
+    max-height: 250px;
+    width: 100%;
+  }
+}
