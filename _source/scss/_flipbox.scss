@@ -76,7 +76,9 @@
     }
   }
 
-  &:hover .fusion-builder-row-inner {
+  &:hover .fusion-builder-row-inner,
+  &:active .fusion-builder-row-inner,
+  &:focus .fusion-builder-row-inner {
     transform: rotateY(180deg);
   }
 
