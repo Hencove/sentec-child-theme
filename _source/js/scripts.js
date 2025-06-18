@@ -1,6 +1,8 @@
+import "./_flipbox";
 //
 //	? code here will execute before the DOM has fully loaded
 //
+
 (function (document, window, $) {
   //
   //	? code here will execute once the page is ready
