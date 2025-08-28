@@ -157,11 +157,27 @@ html body {
   }
 }
 
-// Set all bullet markers to sentec orange
+// Set select bullet markers to sentec orange
 .bullets-orange {
   ul {
     li::marker {
       color: #ff6600;
+    }
+  }
+}
+// Set select bullet markers to sentec blue
+.bullets-blue {
+  ul {
+    li::marker {
+      color: #6194ab;
+    }
+  }
+}
+//Set select bullet markers to sentec green
+.bullets-green {
+  ul {
+    li::marker {
+      color: #8fb0a1;
     }
   }
 }
