@@ -32,6 +32,7 @@ auth.json
 .Trashes
 Thumbs.db
 .nova
+.zed
 
 #---------------------------
 # large/disallowed file types

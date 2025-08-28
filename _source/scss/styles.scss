@@ -158,8 +158,10 @@ html body {
 }
 
 // Set all bullet markers to sentec orange
-ul {
-  li::marker {
-    color: #ff6600;
+.bullets-orange {
+  ul {
+    li::marker {
+      color: #ff6600;
+    }
   }
 }
