@@ -29,13 +29,12 @@ import "./_flipbox";
 
   $(document).ajaxComplete(function () {
     // Your code to run after an AJAX request completes
-    console.log("AJAX request completed");
+    // console.log("AJAX request completed");
 
     // get all the filters on this page...
     const filters = $(
       "body.post-type-archive-sentec-publications .wpc-filters-widget-select, body.post-type-archive-ifu-manual .wpc-filters-widget-select",
     );
-    console.log(filters);
 
     // for each filter: inject (add html after select element, not inside it) new element for the arrow thing (with class)
     filters.each(function (index, filterEl) {
