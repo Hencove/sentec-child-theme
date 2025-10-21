@@ -104,14 +104,10 @@ body.post-type-archive-ifu-manual {
   .wpc-filters-section {
     // margin-bottom: unset;
   }
-  // .wpc-filters-widget-select {
-  // 	appearance: none;
-  // 	margin-bottom: 0;
-  // 	margin-right: 1em;
-  // }
-  // .wpc-filter-content {
-  // 	margin-right: 1em;
-  // }
+
+  .text-language {
+    overflow-wrap: break-word;
+  }
 
   //set 'Read More' button to sit at the bottom of the container for consistency
   div:has(> a.fusion-button) {
