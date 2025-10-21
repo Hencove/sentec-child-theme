@@ -19,8 +19,7 @@ import "./_flipbox";
 
   // get all the filters on this page...
   const filters = $(
-    "body.post-type-archive-sentec-publications .wpc-filters-widget-select",
-    "body.post-type-archive-ifu-manual .wpc-filters-widget-select",
+    "body.post-type-archive-sentec-publications .wpc-filters-widget-select, body.post-type-archive-ifu-manual .wpc-filters-widget-select",
   );
 
   // if we got filters...
@@ -34,8 +33,7 @@ import "./_flipbox";
 
     // get all the filters on this page...
     const filters = $(
-      "body.post-type-archive-sentec-publications .wpc-filters-widget-select",
-      "body.post-type-archive-ifu-manual .wpc-filters-widget-select",
+      "body.post-type-archive-sentec-publications .wpc-filters-widget-select, body.post-type-archive-ifu-manual .wpc-filters-widget-select",
     );
     console.log(filters);
 
