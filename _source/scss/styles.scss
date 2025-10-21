@@ -65,7 +65,8 @@ body.post-type-archive-ifu-manual {
       right: unset !important;
       top: unset !important;
       left: unset !important;
-      font-family: var(--fa-style-family-classic);
+      // font-family: var(--fa-style-family-classic);
+      font-family: "FontAwesome";
       &:before {
         content: "\f078";
         @include center_absolute;
